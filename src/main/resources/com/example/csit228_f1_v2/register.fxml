@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: MAROON; -fx-border-color:GOLD;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HomeController">
+   <children>
+      <Label layoutX="27.0" layoutY="91.0" prefHeight="25.0" prefWidth="61.0" text="Name:" textFill="#e1cb24">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="313.0" layoutY="91.0" prefHeight="27.0" prefWidth="62.0" text="Email:" textFill="#e1cb24">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="regName" layoutX="36.0" layoutY="123.0" prefHeight="0.0" prefWidth="242.0" promptText="Enter name..." />
+      <TextArea fx:id="regEmail" layoutX="322.0" layoutY="123.0" prefHeight="39.0" prefWidth="250.0" promptText="Enter email..." />
+      <Label layoutX="34.0" layoutY="205.0" text="Username:" textFill="#e1cb24">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="266.0" text="Password:" textFill="#e1cb24">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="regUsername" layoutX="125.0" layoutY="199.0" prefHeight="39.0" prefWidth="242.0" promptText="Enter username..." />
+      <TextArea fx:id="regPass" layoutX="125.0" layoutY="260.0" prefHeight="39.0" prefWidth="242.0" promptText="Enter password..." />
+      <Button fx:id="regBtn" layoutX="447.0" layoutY="299.0" mnemonicParsing="false" onAction="#insertNewUser" prefHeight="39.0" prefWidth="89.0" text="Register" textFill="#10100e">
+         <font>
+            <Font name="Georgia" size="16.0" />
+         </font></Button>
+      <Label layoutX="164.0" layoutY="22.0" text="Register / SignUp" textFill="#ffeb2e">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

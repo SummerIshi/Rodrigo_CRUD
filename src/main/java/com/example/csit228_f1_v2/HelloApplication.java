@@ -33,8 +33,8 @@ public class HelloApplication extends Application {
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
         Text txtWelcome = new Text("Welcome to CIT");
-        txtWelcome.setFont(Font.font("Chiller", FontWeight.EXTRA_BOLD, 69));
-        txtWelcome.setFill(Color.RED);
+        txtWelcome.setFont(Font.font("Verdana", FontWeight.EXTRA_BOLD, 65));
+        txtWelcome.setFill(Color.MAROON);
 //        grid.setAlignment();
         grid.setPadding(new Insets(20));
 //        grid.
@@ -42,7 +42,7 @@ public class HelloApplication extends Application {
         grid.add(txtWelcome, 0, 0, 3, 1);
 
         Label lbUsername = new Label("Username: ");
-        lbUsername.setTextFill(Color.LIGHTSKYBLUE);
+        lbUsername.setTextFill(Color.MAROON);
         lbUsername.setFont(Font.font(30));
         grid.add(lbUsername, 0, 1);
 
@@ -53,7 +53,7 @@ public class HelloApplication extends Application {
 
         Label lbPassword = new Label("Password");
         lbPassword.setFont(Font.font(30));
-        lbPassword.setTextFill(Color.CHARTREUSE);
+        lbPassword.setTextFill(Color.MAROON);
         grid.add(lbPassword, 0, 2);
 
         PasswordField pfPassword = new PasswordField();
@@ -102,6 +102,10 @@ public class HelloApplication extends Application {
         btnLogin.setFont(Font.font(40));
         grid.add(btnLogin, 0, 3, 2, 1);
 
+        Button btnSignup= new Button("Sign Up");
+        btnSignup.setFont(Font.font(40));
+        grid.add(btnSignup, 0, 4, 3, 2);
+
         btnLogin.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -116,6 +120,22 @@ public class HelloApplication extends Application {
                 }
             }
         });
+
+        btnSignup.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                System.out.println("Hello");
+                try {
+                    Parent p = FXMLLoader.load(getClass().getResource("register.fxml"));
+                    Scene s = new Scene(p);
+                    stage.setScene(s);
+                    stage.show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
 
         Scene scene = new Scene(grid, 700, 500, Color.BLACK);
         stage.setScene(scene);

@@ -1,12 +1,12 @@
 package com.example.csit228_f1_v2;
 
-import javafx.scene.control.ProgressBar;
-import javafx.scene.control.ProgressIndicator;
-import javafx.scene.control.Slider;
-import javafx.scene.control.ToggleButton;
+import com.example.csit228_f1_v2.CRUD.CRUD;
+import javafx.scene.control.*;
 
 public class HomeController {
 
+    public CRUD crud = new CRUD();
+    public TextArea regEmail, regName,regUsername,regPass;
     public ToggleButton tbNight;
     public ProgressIndicator piProgress;
     public Slider slSlider;
@@ -30,5 +30,14 @@ public class HomeController {
             tbNight.getParent().setStyle("-fx-background-color: WHITE");
             tbNight.setText("NIGHT");
         }
+    }
+
+    public void insertNewUser(){
+        String name = regName.getText();
+        String email = regEmail.getText();
+        String username = regUsername.getText();
+        String password = regPass.getText();
+
+        crud.insertRecord(name,email,username,password);
     }
 }
