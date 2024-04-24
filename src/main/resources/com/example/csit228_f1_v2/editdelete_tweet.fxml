@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="275.0" prefWidth="582.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HomeController">
+   <children>
+      <VBox prefHeight="275.0" prefWidth="582.0">
+         <children>
+            <TextField fx:id="tweet_username" prefHeight="36.0" prefWidth="507.0" promptText="username" style="-fx-background-color: black;" styleClass="friendUN" text="username">
+               <font>
+                  <Font name="Bookman Old Style Bold Italic" size="21.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="tweet_body" prefHeight="193.0" prefWidth="458.0" promptText="post.">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </TextField>
+            <HBox prefHeight="48.0" prefWidth="538.0">
+               <children>
+                  <Button fx:id="tweet_like" mnemonicParsing="false" style="-fx-background-color: black;" text="99" textFill="RED">
+      
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@heart.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="40.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Bell MT Bold" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="tweet_edit" mnemonicParsing="false" prefHeight="33.0" prefWidth="109.0" style="-fx-background-color: black; -fx-background-radius: 20; -fx-border-color: green; -fx-border-radius: 20; -fx-border-width: 2;" text="save changes" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="220.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Courier New Bold Italic" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="tweet_delete" mnemonicParsing="false" prefHeight="26.0" prefWidth="93.0" style="-fx-background-color: black; -fx-background-radius: 20; -fx-border-color: red; -fx-border-radius: 20; -fx-border-width: 2;" text="delete" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="15.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Courier New Bold Italic" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+
+
+
+         </children></VBox>
+   </children>
+</AnchorPane>

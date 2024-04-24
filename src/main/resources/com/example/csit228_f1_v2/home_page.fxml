@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" stylesheets="@style.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HomeController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ScrollPane layoutY="46.0" prefHeight="354.0" prefWidth="600.0">
+              <content>
+                        <VBox fx:id="mainVbox" alignment="CENTER" layoutX="1.0" prefHeight="354.0" prefWidth="587.0" style="-fx-background-color: black;">
+
+                        </VBox>
+
+
+              </content>
+            </ScrollPane>
+            <Button layoutX="437.0" layoutY="7.0" mnemonicParsing="false" onAction="#goCreateTweet" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="Create Tweet" textFill="WHITE">
+               <font>
+                  <Font name="Courier New" size="15.0" />
+               </font></Button>
+            <Button layoutX="14.0" layoutY="7.0" mnemonicParsing="false" onAction="#goProfile" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20;" text="MyProfile">
+               <font>
+                  <Font name="Courier New Bold" size="15.0" />
+               </font></Button>
+            <Button layoutX="198.0" layoutY="7.0" mnemonicParsing="false" onAction="#loadPosts" prefHeight="32.0" prefWidth="91.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-radius: 5; -fx-background-radius: 5;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Courier New" size="15.0" />
+               </font></Button>
+            <Button layoutX="310.0" layoutY="7.0" mnemonicParsing="false" onAction="#goMyTweets" prefHeight="32.0" prefWidth="111.0" style="-fx-background-color: black; -fx-border-radius: 5; -fx-border-color: white; -fx-background-radius: 5;" text="My Tweets" textFill="#fafafa">
+               <font>
+                  <Font name="Courier New" size="15.0" />
+               </font>
+            </Button>
+         </children></Pane>
+   </children>
+</AnchorPane>

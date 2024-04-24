@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="305.0" prefWidth="571.0" style="-fx-background-radius: 10px; -fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HomeController">
+   <children>
+      <TextArea fx:id="post_desc" layoutX="40.0" layoutY="26.0" prefHeight="143.0" prefWidth="497.0" promptText="What is happening!?" style="-fx-background-color: #FFFFFF; -fx-text-fill: #000000; -fx-background-radius: 30;">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="23.0" />
+         </font></TextArea>
+      <Button fx:id="post_btn" layoutX="457.0" layoutY="187.0" mnemonicParsing="false" onAction="#addTweet" prefHeight="36.0" prefWidth="72.0" style="-fx-background-color: black; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #1e90ff; -fx-border-width: 2;" text="post" textFill="WHITE">
+         <font>
+            <Font name="Courier New Bold" size="15.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

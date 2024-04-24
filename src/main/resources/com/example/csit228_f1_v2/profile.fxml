@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="534.0" prefWidth="354.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HomeController">
+   <children>
+      <TextField fx:id="prof_username" layoutX="60.0" layoutY="227.0" prefHeight="26.0" prefWidth="226.0">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="prof_email" layoutX="60.0" layoutY="283.0" prefHeight="26.0" prefWidth="226.0">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></TextField>
+      <Button layoutX="239.0" layoutY="475.0" mnemonicParsing="false" onAction="#goBackLogIn" prefHeight="36.0" prefWidth="94.0" style="-fx-background-color: blue; -fx-border-color: white; -fx-border-radius: 10; -fx-background-radius: 10;" text="Log Out" textFill="#d7d7d7">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label layoutX="60.0" layoutY="18.0" text="Edit Profile Info:" textFill="#e1dcdc">
+         <font>
+            <Font name="Courier New Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="prof_password" layoutX="60.0" layoutY="341.0" prefHeight="26.0" prefWidth="226.0">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font></TextField>
+      <Label layoutX="46.0" layoutY="202.0" text="username:" textFill="#d9d2d2">
+         <font>
+            <Font name="Courier New" size="13.0" />
+         </font></Label>
+      <Label layoutX="43.0" layoutY="259.0" text="email:" textFill="#d9d2d2">
+         <font>
+            <Font name="Courier New" size="13.0" />
+         </font></Label>
+      <Label layoutX="48.0" layoutY="316.0" text="password:" textFill="#d9d2d2">
+         <font>
+            <Font name="Courier New" size="13.0" />
+         </font></Label>
+      <Button layoutX="71.0" layoutY="383.0" mnemonicParsing="false" onAction="#saveProfileChanges" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: black; -fx-border-color: green; -fx-border-radius: 10; -fx-border-width: 2px;" text="Save changes" textFill="WHITE" />
+      <Circle layoutX="174.0" layoutY="119.0" radius="52.0" stroke="#dfdcdc" strokeType="INSIDE" />
+      <Button layoutX="18.0" layoutY="15.0" mnemonicParsing="false" onAction="#goBackHome" text="&lt;" />
+      <Button layoutX="176.0" layoutY="383.0" mnemonicParsing="false" onAction="#deleteAccount" style="-fx-background-color: black; -fx-border-color: maroon; -fx-border-radius: 10; -fx-border-width: 2px;" text="Delete account" textFill="WHITE" />
+      <Label fx:id="deletedlabel" layoutX="106.0" layoutY="430.0" prefHeight="18.0" prefWidth="137.0" />
+   </children>
+</AnchorPane>

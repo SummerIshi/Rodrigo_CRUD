@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 4px; -fx-effect: dropshadow(three-pass-box, black, 0, 0, 0, 0);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csit228_f1_v2.HomeController">
+   <children>
+      <Label layoutX="285.0" layoutY="8.0" prefHeight="66.0" prefWidth="37.0" text="X" textFill="WHITE">
+         <font>
+            <Font name="Broadway" size="65.0" />
+         </font>
+      </Label>
+      <Label layoutX="229.0" layoutY="74.0" prefHeight="46.0" prefWidth="161.0" text="Sign in to X" textFill="WHITE">
+         <font>
+            <Font name="Calisto MT" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lg_username" layoutX="235.0" layoutY="151.0" prefHeight="26.0" prefWidth="173.0" />
+      <TextField fx:id="lg_password" layoutX="234.0" layoutY="204.0" prefHeight="26.0" prefWidth="174.0" />
+      <Label layoutX="146.0" layoutY="154.0" prefHeight="19.0" prefWidth="82.0" text="username:" textFill="WHITE">
+         <font>
+            <Font name="Courier New Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="208.0" text="password:" textFill="WHITE">
+         <font>
+            <Font name="Courier New Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="268.0" layoutY="243.0" mnemonicParsing="false" onAction="#LogIn" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 10;" text="Sign in" textFill="WHITE">
+         <font>
+            <Font name="Courier New" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="166.0" layoutY="307.0" prefHeight="18.0" prefWidth="193.0" text="Don't have an account?" textFill="WHITE">
+         <font>
+            <Font name="Courier New" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="357.0" layoutY="304.0" mnemonicParsing="false" onAction="#goRegisterPage" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 1px; -fx-border-radius: 5;" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font name="Courier New Italic" size="11.0" />
+         </font>
+      </Button>
+      <Label fx:id="loginPromptLabel" layoutX="251.0" layoutY="277.0">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
