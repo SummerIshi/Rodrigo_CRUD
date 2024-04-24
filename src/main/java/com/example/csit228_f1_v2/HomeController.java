@@ -1,6 +1,7 @@
 package com.example.csit228_f1_v2;
 
 import com.example.csit228_f1_v2.CRUD.CRUD;
+import com.example.csit228_f1_v2.CRUD.MySQLConnection;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -15,6 +16,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -158,28 +161,37 @@ public class HomeController {
         mainVbox.getChildren().clear();
         ArrayList<Tweet> tweets = CRUD.readPosts();
 
-        for(Tweet t : tweets){
-            User user = CRUD.getUser(t.uid);
+        try(Connection c = MySQLConnection.getConnection()){
+            c.setAutoCommit(false);
 
-            FXMLLoader p = new FXMLLoader(getClass().getResource("actual_tweet.fxml"));
-            AnchorPane ap = p.load();
-            Label uname = (Label) ap.lookup("#tweet_username");
-            Label body = (Label) ap.lookup("#tweet_body");
-            Button like = (Button) ap.lookup("#tweet_like");
-            like.setOnAction(actionEvent -> likePost(t));
+            for(Tweet t : tweets){
+                User user = CRUD.getUser(t.uid);
 
-            body.setText(t.body);
-            like.setText(String.valueOf(t.like));
+                FXMLLoader p = new FXMLLoader(getClass().getResource("actual_tweet.fxml"));
+                AnchorPane ap = p.load();
+                Label uname = (Label) ap.lookup("#tweet_username");
+                Label body = (Label) ap.lookup("#tweet_body");
+                Button like = (Button) ap.lookup("#tweet_like");
+                like.setOnAction(actionEvent -> likePost(t));
 
-            if(t.uid == SESSION.getInstance().getUser().uid){
-                ap.getStylesheets().clear();
-                ap.getStylesheets().add(Objects.requireNonNull(getClass().getResource("moots.css")).toExternalForm());
-                uname.setText(user.username + " (you)");
-            } else {
-                uname.setText(user.username);
+                body.setText(t.body);
+                like.setText(String.valueOf(t.like));
+
+                if(t.uid == SESSION.getInstance().getUser().uid){
+                    ap.getStylesheets().clear();
+                    ap.getStylesheets().add(Objects.requireNonNull(getClass().getResource("moots.css")).toExternalForm());
+                    uname.setText(user.username + " (you)");
+                } else {
+                    uname.setText(user.username);
+                }
+                mainVbox.getChildren().add(ap);
             }
-            mainVbox.getChildren().add(ap);
+
+            c.commit();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
+
 
     }
 
