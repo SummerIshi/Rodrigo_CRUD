@@ -21,7 +21,7 @@ public class Twitter extends Application {
 
     public static void goLogIn(){
         CRUD.createTable();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("log_in.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Twitter.class.getResource("log_in.fxml"));
         Scene scene = null;
         try {
             scene = new Scene(fxmlLoader.load(), 600, 400);

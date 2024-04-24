@@ -24,7 +24,7 @@ public class HelloController {
     }
     @FXML
     protected void onSigninClick() throws IOException {
-        Parent homeview = FXMLLoader.load(HelloApplication.class
+        Parent homeview = FXMLLoader.load(Twitter.class
                 .getResource("home-view.fxml"));
         AnchorPane p = (AnchorPane) pnLogin.getParent();
         p.getChildren().remove(pnLogin);
